@@ -28,7 +28,7 @@ function App() {
         </div>
 
         <div className='p-20' id='recomendadas'>
-          <div className="w-48 h-64 shadow-md rounded-lg">
+          <div className="card">
             <div className='w-full h-3/5 rounded-t-lg bg-norway bg-cover'></div>
             <div className='w-full h-2/5 bg-secondary px-4 rounded-b-lg'>
               <p className='text-white font-bold text-lg py-2'>Norway</p>
