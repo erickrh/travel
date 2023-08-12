@@ -1,22 +1,44 @@
 import './App.css'
+import sanFrancisco from './img/sanFrancisco.jpg';
 
 function App() {
 
   return (
     <>
-    <div className="font-Montserrat text-4xl text-center">Hola</div>
+      <nav></nav>
 
-      <div className='grid gap-2 grid-cols-3 grid-rows-3 bg-primary w-96 h-auto p-5'>
-        <div className="w-1/9 h-16 bg-blue-300 flex justify-center items-center">1</div>
-        <div className="w-1/9 h-16 bg-blue-300 flex justify-center items-center">2</div>
-        <div className="w-1/9 h-16 bg-blue-300 flex justify-center items-center">3</div>
-        <div className="w-1/9 h-16 bg-blue-300 flex justify-center items-center">4</div>
-        <div className="w-1/9 h-16 bg-blue-300 flex justify-center items-center">5</div>
-        <div className="w-1/9 h-16 bg-blue-300 flex justify-center items-center">6</div>
-        <div className="w-1/9 h-16 bg-blue-300 flex justify-center items-center">7</div>
-        <div className="w-1/9 h-16 bg-blue-300 flex justify-center items-center">8</div>
-        <div className="w-1/9 h-16 bg-blue-300 flex justify-center items-center">9</div>
-      </div>
+      <div id='tabBar'></div>
+
+      <section className='w-full h-screen'>
+        <div id='home'>
+          <div className="w-full h-3/4">
+            <div className='w-full h-full flex flex-col absolute space-y-96 py-4 items-center'>
+              <input className='outline-none p-3 rounded-full shadow-sm' placeholder='San Francisco' type="search" name="" id="" />
+              <button className='w-36 rounded-full text-xl text-primary font-semibold p-4 bg-white'>
+                Explorar
+              </button>
+            </div>
+
+            <div className="w-full h-full">
+              <img src={sanFrancisco} />
+            </div>
+
+
+          </div>
+        </div>
+
+        <div className='p-20' id='recomendadas'>
+          <div className="w-48 h-64 shadow-md rounded-lg">
+            <div className='w-full h-3/5 rounded-t-lg bg-norway bg-cover'></div>
+            <div className='w-full h-2/5 bg-secondary px-4 rounded-b-lg'>
+              <p className='text-white font-bold text-lg py-2'>Norway</p>
+              <p className='text-white text-base'>Beautiful landscapes</p>
+            </div>
+          </div>
+        </div>
+
+        <div id='rentasDestacadas'></div>
+      </section>
     </>
   )
 }
