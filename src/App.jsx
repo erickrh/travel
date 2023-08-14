@@ -13,12 +13,11 @@ function App() {
         <div id='home'>
           <div className="w-full h-3/4">
             <div className='w-full h-full flex flex-col absolute space-y-96 py-4 items-center'>
-              <input className='outline-none p-3 rounded-full shadow-sm' placeholder='San Francisco' type="search" name="" id="" />
-              <button className='w-36 rounded-full text-xl text-primary font-semibold p-4 bg-white'>
+              <input className='w-1/2 outline-none p-3 rounded-full shadow-sm transition-all ease-in-out duration-300 focus-within:shadow-sm focus:ring-2 focus:w-11/12' placeholder='San Francisco' type="search" name="" id="" />
+              <button className='w-48 rounded-full text-lg text-primary font-semibold p-4 bg-white transition-all duration-500 ease-in-out hover:bg-primary hover:text-white transform hover:translate-y-1 hover:scale-110'>
                 Explorar
               </button>
             </div>
-
             <div className="w-full h-full">
               <img src={sanFrancisco} />
             </div>
@@ -29,7 +28,7 @@ function App() {
           <p className='text-3xl font-semibold text-primary'>Recomendations</p>
 
           {/* Cards */}
-          <div className='w-auto h-72 flex items-center mt-6 overflow-x-auto overscroll-x-contain space-x-6'>
+          <div className='w-auto h-72 flex items-center mt-6 overflow-x-auto overscroll-x-contain overflow-y-hidden space-x-6'>
             <div className="card">
               <div className='w-full h-3/5 rounded-t-lg bg-norway bg-cover'></div>
               <div className='w-full h-2/5 bg-secondary px-4 rounded-b-lg'>
