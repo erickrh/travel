@@ -74,7 +74,28 @@ function App() {
           </div>
         </div>
 
-        <div id='rentasDestacadas'></div>
+        {/* trendingStays */}
+        <div id='trendingStays' className='px-6 h-full w-full'>
+          <p className='text-3xl text-primary font-semibold pb-6 mt-6'>Trending Stays</p>
+          <div className='w-full h-auto flex flex-col space-y-6 items-center justify-center'>
+            <div className='w-full h-96 bg-chicago bg-cover rounded-xl'>
+              <p className='cardTitle'>Chicago</p>
+              <p className='text-sm pl-8 mr-24 text-white font-semibold'>2 rooms, bathroom and kitchen.</p>
+            </div>
+            <div className='w-full h-96 bg-LA bg-cover rounded-xl'>
+              <p className='cardTitle'>Europe</p>
+              <p className='text-sm pl-8 mr-24 text-white font-semibold'>4 rooms, 3 bathrooms,  kitchen and private pool.</p>
+            </div>
+            <div className='w-full h-96 bg-miami bg-cover rounded-xl'>
+              <p className='cardTitle'>Miami</p>
+              <p className='text-sm pl-8 mr-24 text-white font-semibold'>3 rooms, 2 bathrooms,  kitchen and amazing sea view.</p>
+            </div>
+            <div className='w-full h-96 bg-bali bg-cover rounded-xl'>
+              <p className='cardTitle'>Bali</p>
+              <p className='text-sm pl-8 mr-24 text-white font-semibold'>2 rooms, 2 bathrooms,  kitchen and private pool.</p>
+            </div>
+          </div>
+        </div>
       </section>
     </>
   )

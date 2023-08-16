@@ -434,6 +434,10 @@ video {
   display: none;
 }
 
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -556,8 +560,24 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.cardTitle {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 600;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
 .absolute {
   position: absolute;
+}
+
+.mr-24 {
+  margin-right: 6rem;
 }
 
 .mt-6 {
@@ -584,6 +604,10 @@ video {
   height: 18rem;
 }
 
+.h-96 {
+  height: 24rem;
+}
+
 .h-full {
   height: 100%;
 }
@@ -596,8 +620,8 @@ video {
   width: 50%;
 }
 
-.w-36 {
-  width: 9rem;
+.w-48 {
+  width: 12rem;
 }
 
 .w-auto {
@@ -636,12 +660,20 @@ video {
   overflow-x: auto;
 }
 
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
 .overscroll-x-contain {
   overscroll-behavior-x: contain;
 }
 
 .rounded-full {
   border-radius: 9999px;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .rounded-b-lg {
@@ -662,6 +694,10 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-chicago {
+  background-image: url('./src/img/chicago.jpg');
 }
 
 .bg-new_york {
@@ -713,6 +749,11 @@ video {
   padding-right: 1rem;
 }
 
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -721,6 +762,18 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.pb-6 {
+  padding-bottom: 1.5rem;
+}
+
+.pl-8 {
+  padding-left: 2rem;
+}
+
+.font-Montserrat {
+  font-family: Montserrat, sans-serif;
 }
 
 .text-3xl {
@@ -738,9 +791,9 @@ video {
   line-height: 1.75rem;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .font-bold {
@@ -749,6 +802,11 @@ video {
 
 .font-semibold {
   font-weight: 600;
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .text-primary {
