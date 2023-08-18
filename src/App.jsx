@@ -8,7 +8,6 @@ function App() {
       <nav></nav>
 
       <div id='tabBar'></div>
-
       <section className='w-full h-screen'>
         <div id='home'>
           <div className="w-full h-3/4">
@@ -75,27 +74,75 @@ function App() {
         </div>
 
         {/* trendingStays */}
-        <div id='trendingStays' className='px-6 h-full w-full'>
-          <p className='text-3xl text-primary font-semibold pb-6 mt-6'>Trending Stays</p>
-          <div className='w-full h-auto flex flex-col space-y-6 items-center justify-center'>
-            <div className='w-full h-96 bg-chicago bg-cover rounded-xl'>
-              <p className='cardTitle'>Chicago</p>
-              <p className='text-sm pl-8 mr-24 text-white font-semibold'>2 rooms, bathroom and kitchen.</p>
-            </div>
-            <div className='w-full h-96 bg-LA bg-cover rounded-xl'>
-              <p className='cardTitle'>Europe</p>
-              <p className='text-sm pl-8 mr-24 text-white font-semibold'>4 rooms, 3 bathrooms,  kitchen and private pool.</p>
-            </div>
-            <div className='w-full h-96 bg-miami bg-cover rounded-xl'>
-              <p className='cardTitle'>Miami</p>
-              <p className='text-sm pl-8 mr-24 text-white font-semibold'>3 rooms, 2 bathrooms,  kitchen and amazing sea view.</p>
-            </div>
-            <div className='w-full h-96 bg-bali bg-cover rounded-xl'>
-              <p className='cardTitle'>Bali</p>
-              <p className='text-sm pl-8 mr-24 text-white font-semibold'>2 rooms, 2 bathrooms,  kitchen and private pool.</p>
+        <div>
+          <div id='trendingStays' className='px-6 h-full w-full'>
+            <p className='text-3xl text-primary font-semibold pb-6 mt-6'>Trending Stays</p>
+            <div className='w-full h-auto flex flex-col space-y-6 items-center justify-center'>
+              <div className='w-full h-96 bg-chicago bg-cover rounded-xl'>
+                <p className='cardTitle'>Chicago</p>
+                <p className='text-sm pl-8 mr-24 text-white font-semibold'>2 rooms, bathroom and kitchen.</p>
+              </div>
+              <div className='w-full h-96 bg-LA bg-cover rounded-xl'>
+                <p className='cardTitle'>Europe</p>
+                <p className='text-sm pl-8 mr-24 text-white font-semibold'>4 rooms, 3 bathrooms,  kitchen and private pool.</p>
+              </div>
+              <div className='w-full h-96 bg-miami bg-cover rounded-xl'>
+                <p className='cardTitle'>Miami</p>
+                <p className='text-sm pl-8 mr-24 text-white font-semibold'>3 rooms, 2 bathrooms,  kitchen and amazing sea view.</p>
+              </div>
+              <div className='w-full h-96 bg-bali bg-cover rounded-xl'>
+                <p className='cardTitle'>Bali</p>
+                <p className='text-sm pl-8 mr-24 text-white font-semibold'>2 rooms, 2 bathrooms,  kitchen and private pool.</p>
+              </div>
             </div>
           </div>
         </div>
+
+        <div id='faqs' className='w-full h-auto'>
+          <div className='w-full h-full px-6 flex flex-col space-y-4'>
+            <p className='text-3xl text-primary font-bold mt-6'>FAQs</p>
+            <div>
+              <p className='text-xl font-medium text-primary'>Payment Methods</p>
+              <p className='font-medium pt-2'>
+                We accept VISA, MasterCard, American Express, Paypal and Binance
+              </p>
+            </div>
+            <div>
+              <p className='text-xl font-medium text-primary'>Cancellation Policy</p>
+              <p className='font-medium pt-2'>
+                We accept VISA, MasterCard, American Express, Paypal and Binance
+              </p>
+            </div>
+            <div>
+              <p className='text-xl font-medium text-primary'>Long Stays</p>
+              <p className='font-medium pt-2'>
+                We accept VISA, MasterCard, American Express, Paypal and Binance
+              </p>
+            </div>
+            <div>
+              <p className='text-xl font-medium text-primary'>Payment Methods</p>
+              <p className='font-medium pt-2'>
+                We accept VISA, MasterCard, American Express, Paypal and Binance
+              </p>
+            </div>
+            <div>
+              <p className='text-xl font-medium text-primary'>Cancellation Policy</p>
+              <p className='font-medium pt-2'>
+                We accept VISA, MasterCard, American Express, Paypal and Binance
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <footer className='w-full h-auto bg-gray-50 p-6 space-y-2'>
+          <p className='text-lg text-gray-400 font-semibold'>About Us</p>
+          <p className='text-sm text-gray-400'>Investors</p>
+          <p className='text-sm text-gray-400'>Jobs</p>
+          <p className='text-sm text-gray-400'>Privacy policy</p>
+          <p className='text-sm text-gray-400'>Terms and Conditions</p>
+          <p className='text-sm text-gray-400'>Platzi Travel, inc</p>
+          <p className='text-sm text-gray-400'>Follow Us </p>
+        </footer>
       </section>
     </>
   )
