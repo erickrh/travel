@@ -1,14 +1,20 @@
 import './App.css'
 import sanFrancisco from './img/sanFrancisco.jpg';
+import { ReactComponent as TwitterIcon } from './svg/tw.svg';
+import { ReactComponent as InstagramIcon } from './svg/ig.svg';
+import { ReactComponent as HomeIcon } from './svg/home.svg';
+import { ReactComponent as SearchIcon } from './svg/search.svg';
+import { ReactComponent as RecommendsIcon } from './svg/like.svg';
+import { ReactComponent as MoonIcon } from './svg/moon.svg';
+import { ReactComponent as ProfileIcon } from './svg/profile.svg';
+
 
 function App() {
-
   return (
     <>
       <nav></nav>
 
-      <div id='tabBar'></div>
-      <section className='w-full h-screen'>
+      <section className='w-full h-auto mb-10'>
         <div id='home'>
           <div className="w-full h-3/4">
             <div className='w-full h-full flex flex-col absolute space-y-96 py-4 items-center'>
@@ -140,10 +146,31 @@ function App() {
           <p className='text-sm text-gray-400'>Jobs</p>
           <p className='text-sm text-gray-400'>Privacy policy</p>
           <p className='text-sm text-gray-400'>Terms and Conditions</p>
-          <p className='text-sm text-gray-400'>Platzi Travel, inc</p>
           <p className='text-sm text-gray-400'>Follow Us </p>
+          <div className='flex space-x-4'>
+            <TwitterIcon className='w-7 h-7' />
+            <InstagramIcon className='w-7 h-7' />
+          </div>
         </footer>
       </section>
+
+      <div id='tabBar' className='w-full h-16 bg-white fixed left-0 bottom-0 shadow-md flex justify-center space-x-8 items-center'>
+        <a href="#home">
+          <HomeIcon className='w-7 h-7 fill-gray-200' />
+        </a>
+        <a href="#trendingStays">
+          <SearchIcon className='w-7 h-7 fill-primary' />
+        </a>
+        <a href="#recomendados">
+          <RecommendsIcon className='w-7 h-7 fill-gray-200' />
+        </a>
+        <button>
+          <MoonIcon className='w-7 h-7 fill-gray-200' />
+        </button>
+        <button>
+          <ProfileIcon className='w-7 h-7 fill-gray-200' />
+        </button>
+      </div>
     </>
   )
 }
