@@ -83,25 +83,30 @@ function App() {
 
         {/* trendingStays */}
         <div>
-          <div id='trendingStays' className='px-6 h-full w-full'>
+          <div id='trendingStays' className='px-2 h-full w-full lg:px-6'>
             <p className='text-3xl text-primary font-semibold pb-6 mt-6'>Trending Stays</p>
-            <div className='w-full h-auto flex flex-col space-y-6 items-center justify-center'>
-              <div className='w-full h-96 bg-chicago bg-cover rounded-xl'>
-                <p className='cardTitle'>Chicago</p>
-                <p className='text-sm pl-8 mr-24 text-white font-semibold'>2 rooms, bathroom and kitchen.</p>
+            <div className='w-full h-auto flex flex-col items-center justify-center'>
+              <div className='w-full h-96 bg-chicago bg-cover rounded-xl mb-8 lg:bg-center'>
+                <p className='cardTitle lg:text-black'>Chicago</p>
+                <p className='text-sm pl-8 mr-24 text-white font-semibold lg:text-lg'>2 rooms, bathroom and kitchen.</p>
               </div>
-              <div className='w-full h-96 bg-LA bg-cover rounded-xl'>
-                <p className='cardTitle'>Europe</p>
-                <p className='text-sm pl-8 mr-24 text-white font-semibold'>4 rooms, 3 bathrooms,  kitchen and private pool.</p>
+              <div className='lg:flex lg:h-full lg:w-full lg:space-x-6'>
+                <div className='w-full h-96 bg-LA bg-cover rounded-xl mb-8 lg:h-auto'>
+                  <p className='cardTitle'>Europe</p>
+                  <p className='text-sm pl-8 mr-24 text-white font-semibold lg:text-lg'>4 rooms, 3 bathrooms,  kitchen and private pool.</p>
+                </div>
+                <div className='h-full w-full'>
+                  <div className='w-full h-96 bg-miami bg-cover rounded-xl mb-8'>
+                    <p className='cardTitle'>Miami</p>
+                    <p className='text-sm pl-8 mr-24 text-white font-semibold lg:text-lg'>3 rooms, 2 bathrooms,  kitchen and amazing sea view.</p>
+                  </div>
+                  <div className='w-full h-96 bg-bali bg-cover rounded-xl mb-8'>
+                    <p className='cardTitle'>Bali</p>
+                    <p className='text-sm pl-8 mr-24 text-white font-semibold lg:text-lg'>2 rooms, 2 bathrooms,  kitchen and private pool.</p>
+                  </div>
+                </div>
               </div>
-              <div className='w-full h-96 bg-miami bg-cover rounded-xl'>
-                <p className='cardTitle'>Miami</p>
-                <p className='text-sm pl-8 mr-24 text-white font-semibold'>3 rooms, 2 bathrooms,  kitchen and amazing sea view.</p>
-              </div>
-              <div className='w-full h-96 bg-bali bg-cover rounded-xl'>
-                <p className='cardTitle'>Bali</p>
-                <p className='text-sm pl-8 mr-24 text-white font-semibold'>2 rooms, 2 bathrooms,  kitchen and private pool.</p>
-              </div>
+
             </div>
           </div>
         </div>
