@@ -142,16 +142,20 @@ function App() {
           </div>
         </div>
 
-        <footer className='w-full h-auto bg-gray-50 p-6 space-y-2'>
-          <p className='text-lg text-gray-400 font-semibold'>About Us</p>
-          <p className='text-sm text-gray-400'>Investors</p>
-          <p className='text-sm text-gray-400'>Jobs</p>
-          <p className='text-sm text-gray-400'>Privacy policy</p>
-          <p className='text-sm text-gray-400'>Terms and Conditions</p>
-          <p className='text-sm text-gray-400'>Follow Us </p>
+        <footer className='w-full h-auto bg-gray-50 p-6 space-y-2 flex flex-col'>
+          <h3 className='text-lg text-gray-400 font-semibold'>About Us</h3>
+          <a className='text-sm text-gray-400 cursor-pointer'>Investors</a>
+          <a className='text-sm text-gray-400 cursor-pointer'>Jobs</a>
+          <a className='text-sm text-gray-400 cursor-pointer'>Privacy policy</a>
+          <a className='text-sm text-gray-400 cursor-pointer'>Terms and Conditions</a>
+          <a className='text-sm text-gray-400 cursor-pointer'>Follow Us </a>
           <div className='flex space-x-4'>
-            <TwitterIcon className='w-7 h-7' />
-            <InstagramIcon className='w-7 h-7' />
+            <button>
+              <TwitterIcon className='w-7 h-7' />
+            </button>
+            <button>
+              <InstagramIcon className='w-7 h-7' />
+            </button>
           </div>
         </footer>
       </section>
