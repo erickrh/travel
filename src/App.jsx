@@ -8,7 +8,6 @@ import { ReactComponent as RecommendsIcon } from './svg/like.svg';
 import { ReactComponent as MoonIcon } from './svg/moon.svg';
 import { ReactComponent as ProfileIcon } from './svg/profile.svg';
 
-
 function App() {
   return (
     <>
@@ -17,14 +16,17 @@ function App() {
       <section className='w-full h-auto mb-10'>
         <div id='home'>
           <div className="w-full h-3/4">
-            <div className='w-full h-full flex flex-col absolute space-y-96 py-4 items-center'>
-              <input className='w-1/2 outline-none p-3 rounded-full shadow-sm transition-all ease-in-out duration-300 focus-within:shadow-sm focus:ring-2 focus:w-11/12' placeholder='San Francisco' type="search" name="" id="" />
-              <button className='w-48 rounded-full text-lg text-primary font-semibold p-4 bg-white transition-all duration-500 ease-in-out hover:bg-primary hover:text-white transform hover:translate-y-1 hover:scale-110'>
+            <div className='w-full h-full flex flex-col absolute space-y-96 py-4 items-center lg:space-y-0 lg:items-start lg:pt-20 lg:justify-start'>
+              <input className='w-1/2 outline-none p-3 rounded-full shadow-sm transition-all ease-in-out duration-300 focus-within:shadow-sm focus:ring-2 focus:w-11/12 lg:hidden' placeholder='San Francisco' type="search" />
+              <div className='hidden h-auto lg:w-2/5 lg:flex pb-6'>
+                <p className='text-4xl ml-16 font-bold'>Find More Locations like this</p>
+              </div>
+              <button className='w-48 rounded-full text-lg text-primary font-semibold p-4 bg-white transition-all duration-500 ease-in-out hover:bg-primary hover:text-white transform hover:translate-y-1 hover:scale-110 lg:ml-16'>
                 Explorar
               </button>
             </div>
-            <div className="w-full h-full">
-              <img src={sanFrancisco} />
+            <div className="w-full h-full lg:h-96 lg:bg-sanFranciscoDesktop lg:bg-cover lg:bg-center">
+              <img className='lg:hidden' src={sanFrancisco} />
             </div>
           </div>
         </div>
@@ -154,7 +156,7 @@ function App() {
         </footer>
       </section>
 
-      <div id='tabBar' className='w-full h-16 bg-white fixed left-0 bottom-0 shadow-md flex justify-center space-x-8 items-center'>
+      <div id='tabBar' className='w-full h-16 bg-white fixed left-0 bottom-0 shadow-md flex justify-center space-x-8 items-center lg:hidden'>
         <a href="#home">
           <HomeIcon className='w-7 h-7 fill-gray-200' />
         </a>
