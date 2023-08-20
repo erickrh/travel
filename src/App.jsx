@@ -11,9 +11,7 @@ import { ReactComponent as ProfileIcon } from './svg/profile.svg';
 function App() {
   const htmlElement = document.querySelector('html');
   const toggleDarkMode = () => {
-    htmlElement.classList.contains('dark') ?
-    htmlElement.classList.remove('dark') :
-    htmlElement.classList.add('dark');
+    htmlElement.classList.toggle('dark');
   }
 
   return (
