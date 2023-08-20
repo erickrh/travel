@@ -9,35 +9,42 @@ import { ReactComponent as MoonIcon } from './svg/moon.svg';
 import { ReactComponent as ProfileIcon } from './svg/profile.svg';
 
 function App() {
+  const htmlElement = document.querySelector('html');
+  const toggleDarkMode = () => {
+    htmlElement.classList.contains('dark') ?
+    htmlElement.classList.remove('dark') :
+    htmlElement.classList.add('dark');
+  }
+
   return (
     <>
-      <nav className='w-full h-14 hidden lg:flex items-center bg-white py-4 px-8 justify-between fixed z-50'>
+      <nav className='w-full h-14 hidden lg:flex items-center bg-white py-4 px-8 justify-between fixed z-50 dark:bg-gray-800'>
         <div className='h-auto w-auto'>
-          <p className='text-xl text-primary font-black'>Travel</p>
+          <p className='text-xl text-primary font-black dark:text-white'>Travel</p>
         </div>
         <div className='flex space-x-8 items-center'>
-          <a className='font-bold text-base text-primary' href="#home">Home</a>
-          <a className='font-bold text-base text-primary' href="#recommended">Recommended</a>
-          <a className='font-bold text-base text-primary' href="#trendingStays">Rents</a>
-          <a className='font-bold text-base text-primary' href="#aboutUs">About Us</a>
+          <a className='font-bold text-base text-primary dark:text-white' href="#home">Home</a>
+          <a className='font-bold text-base text-primary dark:text-white' href="#recommended">Recommended</a>
+          <a className='font-bold text-base text-primary dark:text-white' href="#trendingStays">Rents</a>
+          <a className='font-bold text-base text-primary dark:text-white' href="#aboutUs">About Us</a>
         </div>
         <div className='flex items-center space-x-4'>
           <button>
-            <SearchIcon className='w-7 fill-primary' />
+            <SearchIcon className='w-7 fill-primary dark:fill-white' />
+          </button>
+          <button onClick={toggleDarkMode}>
+            <MoonIcon className='w-7 fill-primary dark:fill-white' />
           </button>
           <button>
-            <MoonIcon className='w-7 fill-primary' />
-          </button>
-          <button>
-            <ProfileIcon className='w-4 fill-gray-300' />
+            <ProfileIcon className='w-4 fill-gray-300 dark:fill-white' />
           </button>
         </div>
       </nav>
 
-      <section className='w-full h-auto mb-10 lg:h-screen'>
+      <section className='w-full h-auto mb-12 lg:h-screen'>
         <div className='w-full h-3/4' id='home'>
           <div className="w-full h-full">
-            <div className='w-full h-full flex flex-col absolute space-y-96 py-4 items-center lg:space-y-0 lg:items-start lg:pt-48 lg:justify-start'>
+            <div className='w-full h-full flex flex-col absolute space-y-80 py-4 items-center lg:space-y-0 lg:items-start lg:pt-48 lg:justify-start'>
               <input className='w-1/2 outline-none p-3 rounded-full shadow-sm transition-all ease-in-out duration-300 focus-within:shadow-sm focus:ring-2 focus:w-11/12 lg:hidden' placeholder='San Francisco' type="search" />
               <div className='hidden h-auto lg:w-2/5 lg:flex pb-6'>
                 <p className='text-4xl ml-16 font-bold'>Find More Locations like this</p>
@@ -52,51 +59,51 @@ function App() {
           </div>
         </div>
 
-        <div className='p-6' id='recommended'>
-          <p className='text-3xl font-semibold text-primary'>Recommended</p>
+        <div className='w-full h-auto' id='recommended'>
+          <p className='text-3xl font-semibold text-primary dark:text-white pt-6 pl-6'>Recommended</p>
 
           {/* Cards */}
-          <div className='w-auto h-72 flex items-center mt-6 overflow-x-auto overscroll-x-contain overflow-y-hidden space-x-6'>
+          <div className='w-auto h-72 flex items-center mt-6 p-6 overflow-x-auto overscroll-x-contain overflow-y-hidden space-x-6'>
             <div className="card">
               <div className='w-full h-3/5 rounded-t-lg bg-norway bg-cover'></div>
-              <div className='w-full h-2/5 bg-secondary px-4 rounded-b-lg'>
+              <div className='w-full h-2/5 bg-secondary px-4 rounded-b-lg dark:bg-gray-700'>
                 <p className='text-white font-bold text-lg py-2'>Norway</p>
                 <p className='text-white text-base'>Beautiful landscapes</p>
               </div>
             </div>
             <div className="card">
               <div className='w-full h-3/5 rounded-t-lg bg-new_york bg-cover'></div>
-              <div className='w-full h-2/5 bg-white px-4 rounded-b-lg'>
-                <p className='text-tertiary font-bold text-lg py-2'>New York</p>
-                <p className='text-tertiary text-base'>Concrete jungle</p>
+              <div className='w-full h-2/5 bg-white px-4 rounded-b-lg dark:bg-gray-800'>
+                <p className='text-tertiary font-bold text-lg py-2 dark:text-white'>New York</p>
+                <p className='text-tertiary text-base dark:text-white'>Concrete jungle</p>
               </div>
             </div>
             <div className="card">
               <div className='w-full h-3/5 rounded-t-lg bg-yosemite bg-cover'></div>
-              <div className='w-full h-2/5 bg-secondary px-4 rounded-b-lg'>
+              <div className='w-full h-2/5 bg-secondary px-4 rounded-b-lg dark:bg-gray-700'>
                 <p className='text-white font-bold text-lg py-2'>Yosemite</p>
                 <p className='text-white text-base'>A break from the world</p>
               </div>
             </div>
             <div className="card">
               <div className='w-full h-3/5 rounded-t-lg bg-seattle bg-cover'></div>
-              <div className='w-full h-2/5 bg-white px-4 rounded-b-lg'>
-                <p className='text-tertiary font-bold text-lg py-2'>Seattle</p>
-                <p className='text-tertiary text-base'>Big City</p>
+              <div className='w-full h-2/5 bg-white px-4 rounded-b-lg dark:bg-gray-800'>
+                <p className='text-tertiary font-bold text-lg py-2 dark:text-white'>Seattle</p>
+                <p className='text-tertiary text-base dark:text-white'>Big City</p>
               </div>
             </div>
             <div className="card">
               <div className='w-full h-3/5 rounded-t-lg bg-switzerland bg-cover'></div>
-              <div className='w-full h-2/5 bg-secondary px-4 rounded-b-lg'>
+              <div className='w-full h-2/5 bg-secondary px-4 rounded-b-lg  dark:bg-gray-700'>
                 <p className='text-white font-bold text-lg py-2'>Switzerland</p>
                 <p className='text-white text-base'>A great place</p>
               </div>
             </div>
             <div className="card">
               <div className='w-full h-3/5 rounded-t-lg bg-sydney bg-cover bg-right-bottom'></div>
-              <div className='w-full h-2/5 bg-white px-4 rounded-b-lg'>
-                <p className='text-tertiary font-bold text-lg py-2'>Sydney</p>
-                <p className='text-tertiary text-base'>Beautifull country</p>
+              <div className='w-full h-2/5 bg-white px-4 rounded-b-lg dark:bg-gray-800'>
+                <p className='text-tertiary font-bold text-lg py-2 dark:text-white'>Sydney</p>
+                <p className='text-tertiary text-base dark:text-white'>Beautifull country</p>
               </div>
             </div>
           </div>
@@ -105,7 +112,7 @@ function App() {
         {/* trendingStays */}
         <div>
           <div id='trendingStays' className='px-2 h-full w-full lg:px-6'>
-            <p className='text-3xl text-primary font-semibold pb-6 mt-6'>Trending Stays</p>
+            <p className='text-3xl text-primary font-semibold pb-6 mt-6 dark:text-white'>Trending Stays</p>
             <div className='w-full h-auto flex flex-col items-center justify-center'>
               <div className='w-full h-96 bg-chicago bg-cover rounded-xl mb-8 lg:bg-center'>
                 <p className='cardTitle lg:text-white lg:font-bold'>Chicago</p>
@@ -132,36 +139,36 @@ function App() {
           </div>
         </div>
 
-        <div id='faqs' className='w-full h-auto'>
+        <div id='faqs' className='w-full h-auto mb-8'>
           <div className='w-full h-full px-6 flex flex-col space-y-4'>
-            <p className='text-3xl text-primary font-bold mt-6'>FAQs</p>
+            <p className='text-3xl text-primary font-bold mt-6 dark:text-white'>FAQs</p>
             <div>
-              <p className='text-xl font-medium text-primary'>Payment Methods</p>
-              <p className='font-medium pt-2'>
+              <p className='text-xl font-medium text-primary dark:text-white'>Payment Methods</p>
+              <p className='font-medium pt-2 dark:text-white'>
                 We accept VISA, MasterCard, American Express, Paypal and Binance
               </p>
             </div>
             <div>
-              <p className='text-xl font-medium text-primary'>Cancellation Policy</p>
-              <p className='font-medium pt-2'>
+              <p className='text-xl font-medium text-primary dark:text-white'>Cancellation Policy</p>
+              <p className='font-medium pt-2 dark:text-white'>
                 We accept VISA, MasterCard, American Express, Paypal and Binance
               </p>
             </div>
             <div>
-              <p className='text-xl font-medium text-primary'>Long Stays</p>
-              <p className='font-medium pt-2'>
+              <p className='text-xl font-medium text-primary dark:text-white'>Long Stays</p>
+              <p className='font-medium pt-2 dark:text-white'>
                 We accept VISA, MasterCard, American Express, Paypal and Binance
               </p>
             </div>
             <div>
-              <p className='text-xl font-medium text-primary'>Payment Methods</p>
-              <p className='font-medium pt-2'>
+              <p className='text-xl font-medium text-primary dark:text-white'>Payment Methods</p>
+              <p className='font-medium pt-2 dark:text-white'>
                 We accept VISA, MasterCard, American Express, Paypal and Binance
               </p>
             </div>
             <div>
-              <p className='text-xl font-medium text-primary'>Cancellation Policy</p>
-              <p className='font-medium pt-2'>
+              <p className='text-xl font-medium text-primary dark:text-white'>Cancellation Policy</p>
+              <p className='font-medium pt-2 dark:text-white'>
                 We accept VISA, MasterCard, American Express, Paypal and Binance
               </p>
             </div>
@@ -186,7 +193,7 @@ function App() {
         </footer>
       </section>
 
-      <div id='tabBar' className='w-full h-16 bg-white fixed left-0 bottom-0 shadow-md flex justify-center space-x-8 items-center lg:hidden'>
+      <div id='tabBar' className='w-full h-16 bg-white fixed left-0 bottom-0 shadow-md flex justify-center space-x-8 items-center lg:hidden dark:bg-gray-800'>
         <a href="#home">
           <HomeIcon className='w-7 h-7 fill-gray-200' />
         </a>
@@ -196,7 +203,7 @@ function App() {
         <a href="#recommended">
           <RecommendsIcon className='w-7 h-7 fill-gray-200' />
         </a>
-        <button>
+        <button onClick={toggleDarkMode}>
           <MoonIcon className='w-7 h-7 fill-gray-200' />
         </button>
         <button>
