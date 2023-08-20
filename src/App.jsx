@@ -11,12 +11,33 @@ import { ReactComponent as ProfileIcon } from './svg/profile.svg';
 function App() {
   return (
     <>
-      <nav></nav>
+      <nav className='w-full h-14 hidden lg:flex items-center bg-white py-4 px-8 justify-between fixed z-50'>
+        <div className='h-auto w-auto'>
+          <p className='text-xl text-primary font-black'>Travel</p>
+        </div>
+        <div className='flex space-x-8 items-center'>
+          <a className='font-bold text-base text-primary' href="#home">Home</a>
+          <a className='font-bold text-base text-primary' href="#recommended">Recommended</a>
+          <a className='font-bold text-base text-primary' href="#trendingStays">Rents</a>
+          <a className='font-bold text-base text-primary' href="#aboutUs">About Us</a>
+        </div>
+        <div className='flex items-center space-x-4'>
+          <button>
+            <SearchIcon className='w-7 fill-primary' />
+          </button>
+          <button>
+            <MoonIcon className='w-7 fill-primary' />
+          </button>
+          <button>
+            <ProfileIcon className='w-4 fill-gray-300' />
+          </button>
+        </div>
+      </nav>
 
-      <section className='w-full h-auto mb-10'>
-        <div id='home'>
-          <div className="w-full h-3/4">
-            <div className='w-full h-full flex flex-col absolute space-y-96 py-4 items-center lg:space-y-0 lg:items-start lg:pt-20 lg:justify-start'>
+      <section className='w-full h-auto mb-10 lg:h-screen'>
+        <div className='w-full h-3/4' id='home'>
+          <div className="w-full h-full">
+            <div className='w-full h-full flex flex-col absolute space-y-96 py-4 items-center lg:space-y-0 lg:items-start lg:pt-48 lg:justify-start'>
               <input className='w-1/2 outline-none p-3 rounded-full shadow-sm transition-all ease-in-out duration-300 focus-within:shadow-sm focus:ring-2 focus:w-11/12 lg:hidden' placeholder='San Francisco' type="search" />
               <div className='hidden h-auto lg:w-2/5 lg:flex pb-6'>
                 <p className='text-4xl ml-16 font-bold'>Find More Locations like this</p>
@@ -25,14 +46,14 @@ function App() {
                 Explorar
               </button>
             </div>
-            <div className="w-full h-full lg:h-96 lg:bg-sanFranciscoDesktop lg:bg-cover lg:bg-center">
+            <div className="w-full h-full lg:bg-sanFranciscoDesktop lg:bg-cover lg:bg-center">
               <img className='lg:hidden' src={sanFrancisco} />
             </div>
           </div>
         </div>
 
-        <div className='p-6' id='recomendados'>
-          <p className='text-3xl font-semibold text-primary'>Recomendations</p>
+        <div className='p-6' id='recommended'>
+          <p className='text-3xl font-semibold text-primary'>Recommended</p>
 
           {/* Cards */}
           <div className='w-auto h-72 flex items-center mt-6 overflow-x-auto overscroll-x-contain overflow-y-hidden space-x-6'>
@@ -87,7 +108,7 @@ function App() {
             <p className='text-3xl text-primary font-semibold pb-6 mt-6'>Trending Stays</p>
             <div className='w-full h-auto flex flex-col items-center justify-center'>
               <div className='w-full h-96 bg-chicago bg-cover rounded-xl mb-8 lg:bg-center'>
-                <p className='cardTitle lg:text-black'>Chicago</p>
+                <p className='cardTitle lg:text-white lg:font-bold'>Chicago</p>
                 <p className='text-sm pl-8 mr-24 text-white font-semibold lg:text-lg'>2 rooms, bathroom and kitchen.</p>
               </div>
               <div className='lg:flex lg:h-full lg:w-full lg:space-x-6'>
@@ -147,7 +168,7 @@ function App() {
           </div>
         </div>
 
-        <footer className='w-full h-auto bg-gray-50 p-6 space-y-2 flex flex-col'>
+        <footer id='aboutUs' className='w-full h-auto bg-gray-50 p-6 space-y-2 flex flex-col'>
           <h3 className='text-lg text-gray-400 font-semibold'>About Us</h3>
           <a className='text-sm text-gray-400 cursor-pointer'>Investors</a>
           <a className='text-sm text-gray-400 cursor-pointer'>Jobs</a>
@@ -172,7 +193,7 @@ function App() {
         <a href="#trendingStays">
           <SearchIcon className='w-7 h-7 fill-primary' />
         </a>
-        <a href="#recomendados">
+        <a href="#recommended">
           <RecommendsIcon className='w-7 h-7 fill-gray-200' />
         </a>
         <button>
