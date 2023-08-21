@@ -1,5 +1,13 @@
 import './App.css'
 import sanFrancisco from './img/sanFrancisco.jpg';
+import sanFranciscoDesktop from './img/sanFranciscoDesktop.jpg';
+import norway from './img/norway.jpg';
+import new_york from './img/new_york.jpg';
+import yosemite from './img/yosemite.jpg';
+import seattle from './img/seattle.jpg';
+import switzerland from './img/switzerland.jpg';
+import sydney from './img/sydney.jpg';
+
 import { ReactComponent as TwitterIcon } from './svg/tw.svg';
 import { ReactComponent as InstagramIcon } from './svg/ig.svg';
 import { ReactComponent as HomeIcon } from './svg/home.svg';
@@ -51,8 +59,9 @@ function App() {
                 Explorar
               </button>
             </div>
-            <div className="w-full h-full lg:bg-sanFranciscoDesktop lg:bg-cover lg:bg-center">
+            <div className="w-full h-full lg:bg-cover lg:bg-center">
               <img className='lg:hidden' src={sanFrancisco} />
+              <img className='hidden lg:flex h-full w-full object-cover' src={sanFranciscoDesktop} />
             </div>
           </div>
         </div>
@@ -63,42 +72,54 @@ function App() {
           {/* Cards */}
           <div className='w-auto h-72 flex items-center mt-6 p-6 overflow-x-auto overscroll-x-contain overflow-y-hidden space-x-6'>
             <div className="card">
-              <div className='w-full h-3/5 rounded-t-lg bg-norway bg-cover'></div>
+              <div className='w-full h-3/5 rounded-t-lg'>
+                <img className='h-full w-full object-cover' src={norway} alt="Norway" />
+              </div>
               <div className='w-full h-2/5 bg-secondary px-4 rounded-b-lg dark:bg-gray-700'>
                 <p className='text-white font-bold text-lg py-2'>Norway</p>
                 <p className='text-white text-base'>Beautiful landscapes</p>
               </div>
             </div>
             <div className="card">
-              <div className='w-full h-3/5 rounded-t-lg bg-new_york bg-cover'></div>
+              <div className='w-full h-3/5 rounded-t-lg'>
+                <img className='h-full w-full object-cover' src={new_york} alt="New York" />
+              </div>
               <div className='w-full h-2/5 bg-white px-4 rounded-b-lg dark:bg-gray-800'>
                 <p className='text-tertiary font-bold text-lg py-2 dark:text-white'>New York</p>
                 <p className='text-tertiary text-base dark:text-white'>Concrete jungle</p>
               </div>
             </div>
             <div className="card">
-              <div className='w-full h-3/5 rounded-t-lg bg-yosemite bg-cover'></div>
+              <div className='w-full h-3/5 rounded-t-lg'>
+                <img className='h-full w-full object-cover object-left' src={yosemite} alt="Yosemite" />
+              </div>
               <div className='w-full h-2/5 bg-secondary px-4 rounded-b-lg dark:bg-gray-700'>
                 <p className='text-white font-bold text-lg py-2'>Yosemite</p>
                 <p className='text-white text-base'>A break from the world</p>
               </div>
             </div>
             <div className="card">
-              <div className='w-full h-3/5 rounded-t-lg bg-seattle bg-cover'></div>
+              <div className='w-full h-3/5 rounded-t-lg'>
+                <img className='h-full w-full object-cover object-left' src={seattle} alt="seattle" />
+              </div>
               <div className='w-full h-2/5 bg-white px-4 rounded-b-lg dark:bg-gray-800'>
                 <p className='text-tertiary font-bold text-lg py-2 dark:text-white'>Seattle</p>
                 <p className='text-tertiary text-base dark:text-white'>Big City</p>
               </div>
             </div>
             <div className="card">
-              <div className='w-full h-3/5 rounded-t-lg bg-switzerland bg-cover'></div>
+              <div className='w-full h-3/5 rounded-t-lg'>
+                <img className='h-full w-full object-cover object-left' src={switzerland} alt="switzerland" />
+              </div>
               <div className='w-full h-2/5 bg-secondary px-4 rounded-b-lg  dark:bg-gray-700'>
                 <p className='text-white font-bold text-lg py-2'>Switzerland</p>
                 <p className='text-white text-base'>A great place</p>
               </div>
             </div>
             <div className="card">
-              <div className='w-full h-3/5 rounded-t-lg bg-sydney bg-cover bg-right-bottom'></div>
+              <div className='w-full h-3/5 rounded-t-lg'>
+                <img className='h-full w-full object-cover object-right-bottom' src={sydney} alt="sydney" />
+              </div>
               <div className='w-full h-2/5 bg-white px-4 rounded-b-lg dark:bg-gray-800'>
                 <p className='text-tertiary font-bold text-lg py-2 dark:text-white'>Sydney</p>
                 <p className='text-tertiary text-base dark:text-white'>Beautifull country</p>
@@ -126,13 +147,12 @@ function App() {
                     <p className='cardTitle'>Miami</p>
                     <p className='text-sm pl-8 mr-24 text-white font-semibold lg:text-lg'>3 rooms, 2 bathrooms,  kitchen and amazing sea view.</p>
                   </div>
-                  <div className='w-full h-96 bg-bali bg-cover rounded-xl mb-8'>
+                  <div className='w-full h-96 rounded-xl mb-8 bg-bali bg-cover'>
                     <p className='cardTitle'>Bali</p>
                     <p className='text-sm pl-8 mr-24 text-white font-semibold lg:text-lg'>2 rooms, 2 bathrooms,  kitchen and private pool.</p>
                   </div>
                 </div>
               </div>
-
             </div>
           </div>
         </div>
