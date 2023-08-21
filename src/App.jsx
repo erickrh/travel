@@ -133,7 +133,7 @@ function App() {
           <div id='trendingStays' className='px-2 h-full w-full lg:px-6'>
             <p className='text-3xl text-primary font-semibold pb-6 mt-6 dark:text-white'>Trending Stays</p>
             <div className='w-full h-auto flex flex-col items-center justify-center'>
-              <div className='w-full h-96 bg-chicago bg-cover rounded-xl mb-8 lg:bg-center md:w-2/3'>
+              <div className='w-full h-96 bg-chicago bg-cover rounded-xl mb-8 lg:bg-center md:w-2/3 lg:w-full'>
                 <p className='cardTitle lg:text-white lg:font-bold'>Chicago</p>
                 <p className='text-sm pl-8 mr-24 text-white font-semibold lg:text-lg'>2 rooms, bathroom and kitchen.</p>
               </div>
