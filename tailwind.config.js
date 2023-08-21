@@ -21,7 +21,7 @@ export default {
         // 'chicago': "url('./src/img/chicago.jpg')",
         'europe': "url('./src/img/europe.jpg')",
         'iceland': "url('./src/img/iceland.jpg')",
-        'chicago': "url('./public/img/chicago.jpg')",
+        'chicago': "url('../public/img/chicago.jpg')",
         },
         colors: {
           'primary':"#CC2D4A",
