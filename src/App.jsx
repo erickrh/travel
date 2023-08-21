@@ -50,7 +50,7 @@ function App() {
       <section className='w-full h-auto mb-12 lg:h-screen'>
         <div className='w-full h-3/4' id='home'>
           <div className="w-full h-full">
-            <div className='w-full h-full flex flex-col absolute space-y-80 py-4 items-center lg:space-y-0 lg:items-start lg:pt-48 lg:justify-start'>
+            <div className='w-full h-full flex flex-col absolute space-y-96 py-4 items-center lg:space-y-0 lg:items-start lg:pt-48 lg:justify-start'>
               <input className='w-1/2 outline-none p-3 rounded-full shadow-sm transition-all ease-in-out duration-300 focus-within:shadow-sm focus:ring-2 focus:w-11/12 lg:hidden' placeholder='San Francisco' type="search" />
               <div className='hidden h-auto lg:w-2/5 lg:flex pb-6'>
                 <p className='text-4xl ml-16 font-bold'>Find More Locations like this</p>
